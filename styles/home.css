@@ -12,4 +12,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 70px;
+    padding: 20px;
+    border: 8px solid;
+    border-image: linear-gradient(45deg, turquoise, greenyellow) 1;
+    
 }
