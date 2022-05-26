@@ -1,8 +1,24 @@
-// import functions and grab DOM elements
+function displayTime() {
+    const dateTime = new Date();
+    let hrs = dateTime.getHours();
+    let min = dateTime.getMinutes();
+    let sec = dateTime.getSeconds();
+    let session = document.getElementById('session');
 
-// let state
+    if (hrs >= 12) {
+        session.innerHTML = 'PM';
+    } else {
+        session.innerHTML = 'AM';
+    }
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+
+    if (hrs > 12) {
+        hrs = hrs - 12;
+    }
+
+    document.getElementById('hours').innerHTML = hrs;
+    document.getElementById('minutes').innerHTML = min;
+    document.getElementById('seconds').innerHTML = sec;
+}
+
+setInterval(displayTime, 10);
